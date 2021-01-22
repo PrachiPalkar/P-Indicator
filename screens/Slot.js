@@ -3,9 +3,9 @@ import React from 'react';
 import {  StyleSheet, Text, View } from 'react-native';
 import { db } from '../config';
 
-// let id=1;
+let id=1;
 let addItem = item => {
-    db.ref('/Slot').push({
+    db.ref('/Slot'+id).push({
         slot: item
     });
 };

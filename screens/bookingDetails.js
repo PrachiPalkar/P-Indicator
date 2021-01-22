@@ -93,7 +93,6 @@ export default class bookingDetails extends React.Component {
                             radio_props={TypeOfVehi}
                             initial={2}
                             onPress={(value) => { this.setState({ value: value }) }}
-                            // onPress={(value) => { this.state.vehitype }}
                             buttonSize={10}
                             buttonColor={"#008484"}
                             buttonOuterSize={20}
@@ -101,8 +100,6 @@ export default class bookingDetails extends React.Component {
                             labelStyle={{ fontSize: "25px", fontFamily: "calibri", color: "#008484" }}
                             disable={true}
                             formHorizontal={true}
-                            // selectedValue={this.state.vehitype}
-                            // onValueChange={this.VehiType}
                         ></RadioForm>
                     </View><br></br>
                     <Text style={styles.texttypevehi}>Time Duration</Text>

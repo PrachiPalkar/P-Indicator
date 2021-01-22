@@ -3,11 +3,14 @@ import { View } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-// import AddItem from './screens/addItem';
+import login from './screens/login';
+import homepage from './screens/homepage';
+import registration from "./screens/registration";
 import bookingDetails from './screens/bookingDetails'
 import Slot from './screens/Slot';
 import payment from './screens/payment';
-
+import AboutUs from './screens/AboutUs';
+import MyProf from './screens/MyProf';
 
 
 export class firstpage extends Component {
@@ -19,7 +22,7 @@ export class firstpage extends Component {
 
     buttonPress() {
         console.log('called');
-        this.props.navigation.navigate('bookhere');
+        this.props.navigation.navigate('loginpg');
     }
 
     render() {
@@ -34,7 +37,11 @@ export class firstpage extends Component {
 }
 const AppStackNavigator = createStackNavigator({
 
-    // Add:AddItem,
+    loginpg: login,
+    homepg:homepage,
+    Aboutu:AboutUs,
+    myprof:MyProf,
+    register:registration,
     bookhere: bookingDetails,
     Mazemap: Slot,
     pay: payment,
@@ -43,4 +50,3 @@ const AppStackNavigator = createStackNavigator({
 const App = createAppContainer(AppStackNavigator);
 
 export default App;
-
