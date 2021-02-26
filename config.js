@@ -1,12 +1,18 @@
-import Firebase from 'firebase';
+import 'firebase/auth';
+import firebase from 'firebase';
+import 'firebase/firestore';
+
 let config = {
-    apiKey: "AIzaSyABrRtLDV2WgjWNrIPCmrtzjD68q9WefNE",
-    authDomain: "p-indic.firebaseapp.com",
-    databaseURL: "https://p-indic-default-rtdb.firebaseio.com",
-    projectId: "p-indic",
-    storageBucket: "p-indic.appspot.com",
-    messagingSenderId: "24851866587",
-    appId: "1:24851866587:web:773609eac2521c1738bdfe"
+    apiKey: "AIzaSyB96LapjUlj3PBf3oDxwSteitDGtYNW5Ro",
+    authDomain: "p-indi.firebaseapp.com",
+    projectId: "p-indi",
+    databaseURL: "https://p-indi-default-rtdb.firebaseio.com",
+    storageBucket: "p-indi.appspot.com",
+    messagingSenderId: "720761999636",
+    appId: "1:720761999636:web:6471e55a8806b51fd0f201"
 };
-let app = Firebase.initializeApp(config);
-export const db = app.database();
+
+firebase.initializeApp(config);
+export const provider = new firebase.auth.GoogleAuthProvider();
+firebase.firestore();
+export default firebase;

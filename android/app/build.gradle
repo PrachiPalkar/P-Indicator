@@ -1,5 +1,24 @@
-apply plugin: "com.android.application"
 
+
+Skip to content
+Using Gmail with screen readers
+Meet
+Hangouts
+
+1 of 591
+ikjh
+Inbox
+
+30_SAMRADHNI PATIL
+Attachments
+8:18 PM (14 minutes ago)
+to me, prachipalkar18
+
+
+3 Attachments
+
+apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
 import com.android.build.OutputFile
 
 /**
@@ -185,8 +204,14 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    // implementation platform('com.google.firebase:firebase-bom:26.3.0') 
+    // implementation platform('com.google.firebase:firebase-bom:26.4.0')
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
 
+    // compile project(':RNMail')
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    // implementation project(path: ":@react-native-firebase_app")
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
@@ -217,3 +242,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+buildgradle ... oid_app.txt
+Displaying buildgradle_android.txt.
