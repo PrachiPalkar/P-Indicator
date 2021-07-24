@@ -35,10 +35,6 @@ export default class barcode extends Component{
         <TouchableOpacity onPress={this.getTextInputValue} activeOpacity={0.7} style={styles.button}>
           <Text style={styles.TextStyle}>Generate</Text>
         </TouchableOpacity>
-        {/* <QRCode
-        value={'samradhni.patil14@gmail.com'}
-        size={250}
-        /> */}
         <Barcode value="Hello World" format="CODE128" />;
       </View>
     );
